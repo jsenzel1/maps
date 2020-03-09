@@ -5,16 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDpMgM8XvqMkdtNw5nF2hEYmvNqgFEIltQ",
+            authDomain: "general-57faf.firebaseapp.com",
+            databaseURL: "https://general-57faf.firebaseio.com",
+            projectId: "general-57faf",
+            storageBucket: "general-57faf.appspot.com",
+            messagingSenderId: "823085158394",
+            appId: "1:823085158394:web:d026b5a5aa08b5f5835e43"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        console.log(firebase);
+
+        database = firebase.database();
+        ref = database.ref('mapObjs');
+
+        var data = {
+            location: "100 main street",
+            description: "noice house"
+        }
+
+        // ref.push(data);
+    </script>
+
 </head>
 
 <body>
 
     <h1>Maps of our homes</h1>
     <h2>this is the house I grew up in:</h2>
-
-
-
-
 
     <div class="gmap_canvas"><iframe id="map" width="100%" height="500" id="gmap_canvas"
             src="https://maps.google.com/maps?q=45%20telegraph%20hill%20falmouth%20ma&t=k&z=13&ie=UTF8&iwloc=&output=embed"
@@ -50,6 +77,9 @@
 
     <p>Do we feel a sense of connection, of whimsy and fun when taking a peek into the lives of others? and do we
         hesitate when asked to reciprocate with our own slices of information?</p>
+
+    <!-- adding famous childhood homes to this to be a sort of meta commentary/add some initializing content -->
+    <!-- or surreal humor for sites like the pyramids or famous sites etc. tongue in cheeck-->
 </body>
 
 </html>
