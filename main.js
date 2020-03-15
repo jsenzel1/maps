@@ -68,7 +68,11 @@ function submitData() {
 
         console.log(mapObj);
         ref.push(mapObj);
-        submitted = true;
+        // submitted = true;
+
+        document.getElementById("inputLocation").value = "";
+        document.getElementById("inputDescription").value = "";
+
     }
 
     else {
